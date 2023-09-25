@@ -56,8 +56,8 @@ function Topnav() {
             </div>
           </div>
 
-          <div className="hidden md:block">
-            <div className="ml-auto flex justify-center items-center space-x-4 relative">
+          <div className=" md:block">
+            <div className="ml-auto flex md:flex-row justify-center items-center space-x-4 relative">
               {menuItems.map((item) => (
                 <a
                   key={item.id}

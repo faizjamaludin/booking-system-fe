@@ -50,8 +50,6 @@ function Booking() {
 
   const serverURL = "http://localhost:3001";
 
-  console.log(decodedUser);
-
   useEffect(() => {
     localStorage.setItem("BselectedTab", value);
     if (decodedUser.email == "admin@gmail.com") {
@@ -65,7 +63,6 @@ function Booking() {
   const getBooking = async () => {
     try {
       const response = await axios.get(`${serverURL}/booking/all`);
-      console.log(response);
       setDataPending(
         response.data.filter(
           (item) => item.status === "Pending" || item.status === "pending"
